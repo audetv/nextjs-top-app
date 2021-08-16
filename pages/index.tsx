@@ -1,6 +1,9 @@
+import { Htag } from '../styles/components';
 
 
 export default function Home(): JSX.Element {
 
-  return <div >Hello World!</div>;
+  return <>
+  <Htag tag='h1'>Hello World!</Htag>
+  </>;
 }
