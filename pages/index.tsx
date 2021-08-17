@@ -1,4 +1,4 @@
-import { Htag } from '../styles/components';
+import { Htag } from '../components';
 
 
 export default function Home(): JSX.Element {
