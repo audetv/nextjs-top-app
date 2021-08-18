@@ -7,8 +7,10 @@
     "debug": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "stylelint": "stylelint {**/*,*}.{css,scss} --fix"
+    "lint": "next lint --fix",
+    "eslint-fix": "eslint --fix --ext .js,.jsx src",
+    "stylelint": "stylelint {**/*,*}.{css,scss} --fix",
+    "prettier": "prettier --write \"**/*.+(ts|tsx|js|jsx|json|css|md)\""
   },
   "dependencies": {
     "next": "11.1.0",
@@ -22,7 +24,14 @@
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0",
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.2",
     "sass": "^1.37.5",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
