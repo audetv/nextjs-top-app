@@ -8,10 +8,13 @@ export default function Home(): JSX.Element {
         appearance={'primary'}
         className={'test'}
         onClick={() => console.log('here')}
+        arrow={'right'}
       >
         Кнопка
       </Button>
-      <Button appearance={'ghost'}>Кнопка</Button>
+      <Button appearance={'ghost'} arrow={'down'}>
+        Кнопка
+      </Button>
     </>
   );
 }
