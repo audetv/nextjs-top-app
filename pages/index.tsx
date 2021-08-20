@@ -1,4 +1,4 @@
-import { Button, Htag, P } from '../components';
+import { Button, Htag, P, Tag } from '../components';
 
 export default function Home(): JSX.Element {
   return (
@@ -26,6 +26,16 @@ export default function Home(): JSX.Element {
       <P size={'s'}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, sit.
       </P>
+
+      <Tag color={'primary'} size={'m'}>
+        Lorem.
+      </Tag>
+      <Tag color={'grey'} href={'test'}>
+        Lorem.
+      </Tag>
+      <Tag color={'green'} size={'m'} href={'test'}>
+        Lorem.
+      </Tag>
     </>
   );
 }
