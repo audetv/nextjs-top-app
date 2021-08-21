@@ -1,13 +1,15 @@
 import { Button, Htag, P, Tag } from '../components';
+import { useState } from 'react';
 
 export default function Home(): JSX.Element {
+  const [counter, setCounter] = useState<number>(0);
   return (
     <>
-      <Htag tag="h1">Hello World!</Htag>
+      <Htag tag="h1">Hello World! {counter}</Htag>
       <Button
         appearance={'primary'}
         className={'test'}
-        onClick={() => console.log('here')}
+        onClick={() => setCounter((x) => x + 1)}
         arrow={'right'}
       >
         Кнопка
