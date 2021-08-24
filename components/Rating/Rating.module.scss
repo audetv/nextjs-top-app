@@ -9,3 +9,11 @@
 .editable {
   cursor: pointer;
 }
+
+.star svg:focus {
+  outline: none;
+}
+
+.star svg:focus-visible {
+  outline: blue solid 2px;
+}
