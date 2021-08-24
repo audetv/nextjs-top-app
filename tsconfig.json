@@ -13,10 +13,6 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "typeRoots": [
-      "./@types",
-      "./node_modules/@types"
-    ],
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -24,13 +20,13 @@
     "jsx": "preserve"
   },
   "include": [
-    "@types/index.d.ts",
-    "custom.d.ts",
     "next-env.d.ts",
+    "custom.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+//    "next-env.d.ts"
   ]
 }
