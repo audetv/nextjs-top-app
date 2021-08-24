@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 export default function Home(): JSX.Element {
   const [counter, setCounter] = useState<number>(0);
 
+  const [rating, setRating] = useState<number>(4);
+
   useEffect(() => {
     console.log('Counter ' + counter);
     return function cleanup() {
@@ -46,7 +48,12 @@ export default function Home(): JSX.Element {
       <Tag color={'green'} size={'m'} href={'test'}>
         Lorem.
       </Tag>
-      <Rating rating={4} />
+      <Rating
+        className={'test'}
+        rating={rating}
+        isEditable={true}
+        setRating={setRating}
+      />
     </>
   );
 }
