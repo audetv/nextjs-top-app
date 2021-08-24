@@ -1,5 +1,6 @@
 import { Button, Htag, P, Rating, Tag } from '../components';
 import { useEffect, useState } from 'react';
+import { Layout } from '../layout/Layout';
 
 export default function Home(): JSX.Element {
   const [counter, setCounter] = useState<number>(0);
@@ -14,7 +15,7 @@ export default function Home(): JSX.Element {
   });
 
   return (
-    <>
+    <Layout>
       <Htag tag="h1">Hello World! {counter}</Htag>
       <Button
         appearance={'primary'}
@@ -54,6 +55,6 @@ export default function Home(): JSX.Element {
         isEditable={true}
         setRating={setRating}
       />
-    </>
+    </Layout>
   );
 }
