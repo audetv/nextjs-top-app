@@ -1,5 +1,5 @@
 import { TopPageComponentProps } from './TopPageComponent.props';
-import { Htag, Tag } from '../../components';
+import { Advantages, Htag, Tag } from '../../components';
 import styles from './TopPageComponent.module.css';
 import { HhData } from '../../components/HhData/HhData';
 import { TopLevelCategory } from '../../interfaces/page.interface';
@@ -29,7 +29,12 @@ export const TopPageComponent = ({
           hh.ru
         </Tag>
       </div>
-      {firstCategory === TopLevelCategory.Courses && <HhData {...page.hh} />}
+      {firstCategory === TopLevelCategory.Courses && page.hh && (
+        <HhData {...page.hh} />
+      )}
+      {page.advantages && page.advantages.length > 0 && (
+        <Advantages advantages={page.advantages} />
+      )}
     </div>
   );
 };
