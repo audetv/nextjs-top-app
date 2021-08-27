@@ -1,5 +1,5 @@
 import { TopPageComponentProps } from './TopPageComponent.props';
-import { Htag, Tag } from '../../components';
+import { Card, Htag, Tag } from '../../components';
 import styles from './TopPageComponent.module.css';
 
 export const TopPageComponent = ({
@@ -27,7 +27,9 @@ export const TopPageComponent = ({
           hh.ru
         </Tag>
       </div>
-      <div className={styles.hh}></div>
+      <div className={styles.hh}>
+        <Card>Card</Card>
+      </div>
     </div>
   );
 };
