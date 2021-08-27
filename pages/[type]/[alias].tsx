@@ -30,8 +30,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     );
   }
 
-  console.log(paths);
-
   return {
     paths,
     fallback: true,
@@ -53,11 +51,18 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
       notFound: true,
     };
   }
+
   try {
     const { data: menu } = await axios.post<MenuItem[]>(
       process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
       { firstCategory: firstCategoryItem.id }
     );
+
+    if (menu.length === 0) {
+      return {
+        notFound: true,
+      };
+    }
 
     const { data: page } = await axios.get<TopPageModel>(
       process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/ByAlias/' + params.alias
@@ -76,7 +81,7 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
         products,
       },
     };
-  } catch (e) {
+  } catch {
     return {
       notFound: true,
     };
