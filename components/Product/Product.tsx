@@ -48,8 +48,8 @@ export const Product = ({
         ))}
       </div>
       <div className={styles.priceTitle}>Цена</div>
-      <div className={styles.creditTile}>Кредит</div>
-      <div className={styles.rateTile}>
+      <div className={styles.creditTitle}>Кредит</div>
+      <div className={styles.rateTitle}>
         {product.reviewCount}{' '}
         {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}
       </div>
@@ -82,7 +82,7 @@ export const Product = ({
         )}
       </div>
 
-      <Divider className={styles.hr} />
+      <Divider className={cn(styles.hr, styles.hr2)} />
 
       <div className={styles.actions}>
         <Button appearance={'primary'}>Узнать подробнее</Button>
