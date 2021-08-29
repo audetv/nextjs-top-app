@@ -4,7 +4,7 @@ import { Card } from '../Card/Card';
 import { Rating } from '../Rating/Rating';
 import { Tag } from '../Tag/Tag';
 import { Button } from '../Button/Button';
-import { priceRu } from '../../helpers/helpers';
+import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 import cn from 'classnames';
 
@@ -46,7 +46,10 @@ export const Product = ({
       </div>
       <div className={styles.priceTitle}>Цена</div>
       <div className={styles.creditTile}>Кредит</div>
-      <div className={styles.rateTile}>{product.reviewCount} отзывов</div>
+      <div className={styles.rateTile}>
+        {product.reviewCount}{' '}
+        {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}
+      </div>
 
       <Divider className={styles.hr} />
 
