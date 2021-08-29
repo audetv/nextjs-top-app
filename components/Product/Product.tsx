@@ -7,6 +7,7 @@ import { Button } from '../Button/Button';
 import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 import cn from 'classnames';
+import Image from 'next/image';
 
 export const Product = ({
   product,
@@ -16,10 +17,12 @@ export const Product = ({
   return (
     <Card className={cn(styles.product, className)}>
       <div className={styles.logo}>
-        <img
+        <Image
           src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
           alt={product.title}
           className={styles.image}
+          width={70}
+          height={70}
         />
       </div>
       <div className={styles.title}>{product.title}</div>
