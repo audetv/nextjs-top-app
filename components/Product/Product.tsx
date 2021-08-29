@@ -54,7 +54,15 @@ export const Product = ({
       <Divider className={styles.hr} />
 
       <div className={styles.description}>{product.description}</div>
-      <div className={styles.features}>Features</div>
+      <div className={styles.features}>
+        {product.characteristics.map((c) => (
+          <div key={c.name} className={styles.characteristics}>
+            <span className={styles.characteristicName}>{c.name}</span>
+            <span className={styles.characteristicDots} />
+            <span className={styles.characteristicValue}>{c.value}</span>
+          </div>
+        ))}
+      </div>
       <div className={styles.advBlock}>
         {product.advantages && (
           <div className={styles.advantages}>
